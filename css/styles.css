@@ -1,0 +1,121 @@
+:root {
+  --x-color: #2dc2c0;
+  --o-color: #f1b43a;
+  --box-color: #1f3540;
+  --second-color: #a9bdc8;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #192a32;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(40px, 70px));
+  grid-template-rows: 25px repeat(3, minmax(auto, 70px)) 45px;
+  gap: 12px;
+}
+.game .x-o {
+  display: flex;
+  align-items: center;
+}
+.game .x-o i {
+  font-size: 20px;
+  margin-left: 5px;
+}
+.game .x-o i:first-child {
+  color: var(--x-color);
+}
+.game .x-o i:last-child {
+  color: var(--o-color);
+}
+.game .turn {
+  background-color: var(--box-color);
+  border-radius: 6px;
+  color: var(--second-color);
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.game .turn i {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.game .restart i {
+  margin-left: 100%;
+  background-color: var(--second-color);
+  transform: translateX(-100%);
+  height: 100%;
+  width: 32px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.game .box {
+  background-color: var(--box-color);
+  border-radius: 12px;
+  box-shadow: 0 4px #0f212b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 41px;
+  cursor: pointer;
+}
+.game .box.x-marked {
+  color: var(--x-color);
+}
+.game .box.o-marked {
+  color: var(--o-color);
+}
+.game .last-row {
+  height: 100%;
+  padding: 4px;
+  text-align: center;
+  border-radius: 8px;
+}
+.game .last-row :last-child {
+  font-weight: bold;
+  font-size: 18px;
+}
+.game .x-wins {
+  background-color: var(--x-color);
+}
+.game .req {
+  background-color: var(--second-color);
+}
+.game .o-wins {
+  background-color: var(--o-color);
+}
+.message {
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
+}
+.won-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 1.5;
+  color: #447;
+}

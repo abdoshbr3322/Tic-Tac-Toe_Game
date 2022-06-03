@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css\normalize.css">
+  <link rel="stylesheet" href="css\all.min.css">
+  <link rel="stylesheet" href="css\styles.css">
+  <title>Tic Tac Toe | Game</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="message"></h2>
+    <div class="game">
+      <div class="x-o">
+        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-o"></i>
+      </div>
+      <div class="turn"><i class="fa-solid fa-xmark"></i> Turn</div>
+      <div class="restart">
+        <i class="fa-solid fa-arrow-rotate-right"></i>
+      </div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="box" data-val="o" data-win = "o"></div>
+      <div class="o-wins last-row">
+        <div>
+          <i class="fa-solid fa-o"></i>
+        </div>
+        <div>0</div>
+      </div>
+      <div class="req last-row">
+        <div>Rquired</div>
+        <div>10</div>
+      </div>
+      <div class="x-wins last-row">
+        <div>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div>0</div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
